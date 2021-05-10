@@ -82,7 +82,7 @@ def isAcceptable(x_new, x, T):
 def plotGraph(xCoords, yCoords):
     plt.plot(xCoords, yCoords, '--b')
     plt.scatter(xCoords, yCoords, marker='o')
-
+    plt.show()
     plt.pause(0.001)
     plt.clf()
 
@@ -129,6 +129,7 @@ def main():
     print('Cities: ', num_of_cities)
     xCoords = generateCoordinates()
     yCoords = generateCoordinates()
+    plotGraph(xCoords, yCoords)
     plt.show()
     simulated_annealing(xCoords, yCoords)
 
